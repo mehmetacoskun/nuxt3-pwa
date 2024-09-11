@@ -1,6 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: ["@vite-pwa/nuxt"],
+  runtimeConfig: {
+    // The private keys which are only available server-side
+    // Keys within public are also exposed client-side
+    public: {
+      apiBase: '/api'
+    }
+  },
   pwa: {
     manifest: {
       name: "Nuxt3 PWA",
