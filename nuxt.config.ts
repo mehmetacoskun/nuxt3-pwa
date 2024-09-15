@@ -2,13 +2,22 @@
 export default defineNuxtConfig({
   modules: [
     "@vite-pwa/nuxt",
+    "@nuxtjs/ionic",
     "@nuxt/ui",
     '@vueuse/nuxt',
+    "@nuxtjs/supabase",
   ],
+  supabase: {
+   redirect: false,
+  },
+  ionic: {
+    css: {
+      utilities: true,
+    },
+  },
   extends: [],
   runtimeConfig: {
    public: {
-      apiBase: '/api'
     }
   },
 
