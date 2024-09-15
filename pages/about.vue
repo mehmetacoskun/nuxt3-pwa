@@ -6,15 +6,9 @@
     <UButton :to="link.path">{{ link.name }}</UButton>
    </li>
   </ul>
-  {{ state }}
  </div>
 </template>
 
 <script setup lang="ts">
-const hello = "Hello World";
-
-const { state, isReady } = useAsyncState(
- fetch('https://jsonplaceholder.typicode.com/todos').then(t => t.json()),
- {},
-); whenever(isReady, () => console.log(state))
+const hello = "About Page"
 </script>
